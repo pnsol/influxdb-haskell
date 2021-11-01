@@ -297,6 +297,16 @@ precisionName = \case
   Hour -> "h"
   RFC3339 -> "rfc3339"
 
+-- FIXME give a new type for V2 precision, since apparently minute and hour
+-- are not longer valid.
+precisionNameV2 :: Precision ty -> Text
+precisionNameV2 = \case
+  Nanosecond -> "ns"
+  Microsecond -> "us"
+  Millisecond -> "ms"
+  Second -> "s"
+  _ -> error "Invalid V2 preicision"
+
 -- | A 'Timestamp' is something that can be converted to a valid
 -- InfluxDB timestamp, which is represented as a 64-bit integer.
 class Timestamp time where

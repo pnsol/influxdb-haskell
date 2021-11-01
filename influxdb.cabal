@@ -49,6 +49,7 @@ library
     Database.InfluxDB.Types
     Database.InfluxDB.Write
     Database.InfluxDB.Write.UDP
+    Database.InfluxDB.Write.V2
   other-modules:
     Database.InfluxDB.Internal.Text
   other-extensions:
