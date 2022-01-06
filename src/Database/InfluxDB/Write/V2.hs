@@ -110,36 +110,6 @@ writeByteString params payload = do
     traceM (show response)
     traceM (show body)
     throwIO $ UnexpectedResponse message request body
-
-{-
-  else do
-    traceM (show response)
-    traceM (show body)
-    if BL.null body
-    then do
-      when (HT.statusIsServerError status) $
-        throwIO $ ServerError message
-      when (HT.statusIsClientError status) $
-        throwIO $ ClientError message request
-    else case A.eitherDecode' body of
-      Left message ->
-        throwIO $ UnexpectedResponse message request body
-      Right val -> case A.parse parseErrorObject val of
-        A.Success err ->
-          fail $ "BUG: impossible code path in "
-            ++ "Database.InfluxDB.Write.writeByteString: "
-            ++ err
-        A.Error message -> do
-          when (HT.statusIsServerError status) $
-            throwIO $ ServerError message
-          when (HT.statusIsClientError status) $
-            throwIO $ ClientError message request
-          throwIO $ UnexpectedResponse
-            ("BUG: " ++ message
-              ++ " in Database.InfluxDB.Write.writeByteString")
-            request
-            (A.encode val)
-  -}
   where
     request = (writeRequest params)
       { HC.requestBody = HC.RequestBodyLBS payload
