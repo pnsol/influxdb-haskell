@@ -36,6 +36,8 @@ module Database.InfluxDB.Query
 
   -- * Low-level functions
   , withQueryResponse
+  , setPrecision
+  , errorQuery
 
   -- * Helper types
   , Ignored

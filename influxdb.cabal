@@ -46,6 +46,7 @@ library
     Database.InfluxDB.Manage
     Database.InfluxDB.Ping
     Database.InfluxDB.Query
+    Database.InfluxDB.Query.V2Compat
     Database.InfluxDB.Types
     Database.InfluxDB.Write
     Database.InfluxDB.Write.UDP
