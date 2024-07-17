@@ -1,8 +1,28 @@
 # Revision history for influxdb
 
+## v1.9.3.2 - 2024-07-12
+
+* Allow newer dependencies ([101](https://github.com/maoe/influxdb-haskell/pull/101))
+
+## v1.9.3.1 - 2024-03-15
+
+* Support GHC 9.8 ([#98](https://github.com/maoe/influxdb-haskell/pull/98))
+* Allow latest time package ([#99](https://github.com/maoe/influxdb-haskell/pull/99))
+
+## v1.9.3 - 2023-06-29
+
+* Mitigate InfluxDB compatibility problems ([#94](https://github.com/maoe/influxdb-haskell/pull/94))
+* Support GHC 9.4 and 9.6 ([#95](https://github.com/maoe/influxdb-haskell/pull/95) and [#97](https://github.com/maoe/influxdb-haskell/pull/97))
+* Revitalize CI ([#96](https://github.com/maoe/influxdb-haskell/pull/96))
+
+## v1.9.2.2 - 2021-11-21
+
+* Update dependencies
+
 ## v1.9.2.1 - 2021-10-20
 
 * Add support for aeson 2.0 ([#89](https://github.com/maoe/influxdb-haskell/pull/89))
+
 ## v1.9.2 - 2021-09-08
 
 * Derive Show for Line ([#87](https://github.com/maoe/influxdb-haskell/pull/87))
